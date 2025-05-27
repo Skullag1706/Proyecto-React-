@@ -3,6 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: #f4efe6; /* warm beige background */
+  font-family: 'Georgia', serif; /* rustic serif font */
+  color: #5b4636; /* dark brown text */
+  box-shadow: inset 0 0 50px #d6c9b8; /* subtle textured shadow */
+  border: 1px solid #c9b89a;
+  border-radius: 8px;
 }
 
 .logo {
@@ -12,10 +18,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #a67c00aa); /* warm amber shadow */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #b8860baa); /* darker amber shadow */
 }
 
 @keyframes logo-spin {
@@ -29,14 +35,74 @@
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: none; /* disable spin for rustic feel */
   }
 }
 
 .card {
   padding: 2em;
+  background: #e6d8c3; /* light rustic background */
+  border: 1px solid #bfae8c;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px #c9b89a;
+  font-family: 'Georgia', serif;
+  color: #5b4636;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #7a6a53;
+}
+
+/* Additional rustic styles for form elements */
+form {
+  background: #f9f4ec;
+  padding: 20px;
+  border: 1px solid #bfae8c;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #c9b89a;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
+  color: #5b4636;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #a67c00;
+  border-radius: 4px;
+  background: #fff8e1;
+  color: #5b4636;
+  font-family: 'Georgia', serif;
+  box-shadow: inset 1px 1px 3px #d6c9b8;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #b8860b;
+  outline: none;
+  box-shadow: 0 0 5px #b8860b;
+}
+
+button {
+  background-color: #a67c00;
+  color: #f4efe6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #7a6a53;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b8860b;
+}
+
+span {
+  font-style: italic;
 }

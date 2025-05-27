@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import swal from 'sweetalert2'
 
 function Formulario() {
   const [nombre, setNombre] = useState("");
@@ -52,11 +53,27 @@ function Formulario() {
     return (
       nombre && apellido && telefono && email &&
       !errorNombre && !errorApellido && !errorTelefono && !errorEmail
+      
     );
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    swal.fire({
+      icon: 'success',
+      title: 'Información guardada correctamente',
+      showConfirmButton: false,
+      timer: 1500
+    });
+    // Clear form fields
+    setNombre("");
+    setApellido("");
+    setTelefono("");
+    setEmail("");
+  };
+
   return (
-    <form action="">
+    <form onSubmit={handleSubmit}>
       <label htmlFor="nombre">Nombres</label><br />
       <input id="nombre" type="text" onChange={nomval} value={nombre} placeholder='Ej: Carlos' /><br />
       {errorNombre && <span style={{ color: 'red' }}>{errorNombre}</span>}<br />
@@ -74,6 +91,7 @@ function Formulario() {
       {errorEmail && <span style={{ color: 'red' }}>{errorEmail}</span>}<br /><br />
 
       {formularioValido() && <button type="submit">Enviar</button>}
+    
     </form>
   );
 }
