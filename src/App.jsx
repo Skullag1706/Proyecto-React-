@@ -65,7 +65,6 @@ function Formulario() {
       showConfirmButton: false,
       timer: 1500
     });
-    // Clear form fields
     setNombre("");
     setApellido("");
     setTelefono("");
